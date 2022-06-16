@@ -1,0 +1,40 @@
+[package]
+authors = ["Greg Green <ggreen@bit-builder.com>"]
+edition = "2018"
+name = "target-tests"
+publish = false
+version = "0.1.0"
+
+[[test]]
+name = "ti-ina219"
+harness = false
+
+[dev-dependencies]
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7.1"
+defmt = "0.3.2"
+defmt-rtt = "0.3.2"
+defmt-test = "0.3.0"
+stm32f1xx-hal = { version = "0.9", features = ["stm32f103", "medium", "rt"] }
+panic-probe = { version = "0.3.0", features = ['print-defmt'] }
+ti-ina219 = { path = ".." }
+
+[features]
+default = ['defmt-trace']
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
+
+[profile.dev]
+codegen-units = 1
+incremental = false
+lto = 'fat'
+opt-level = 's'
+
+[profile.test]
+codegen-units = 1
+incremental = false
+lto = 'fat'
+opt-level = 's'

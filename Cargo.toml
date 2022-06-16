@@ -1,0 +1,12 @@
+[package]
+authors = ["Greg Green <ggreen@bit-builder.com>"]
+edition = "2018"
+name = "ti-ina219"
+version = "0.1.0"
+
+[dependencies]
+embedded-hal = "0.2.4"
+defmt = "0.3.2"
+
+[dev-dependencies]
+embedded-hal-mock = "0.7.2"
