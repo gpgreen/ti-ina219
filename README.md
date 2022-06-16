@@ -4,9 +4,8 @@ Driver for Texas Instruments INA219 device. This device is a high-side
 current shunt and power monitor with i2c interface. [Driver data sheet
 here!](https://cdn-shop.adafruit.com/datasheets/ina219.pdf).
 
-Includes a specialization of the driver for the adafruit breakout
-board including this [device]
-(https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/overview). The
+Includes a specialization of the driver as implemented on the [adafruit breakout
+board](https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/overview). The
 device is specialized to use the current shunt resistor value and have
 preset configurations, similar to the [arduino
 library](https://github.com/adafruit/Adafruit_INA219).
