@@ -70,7 +70,7 @@ mod tests {
             1000, // data_timeout_us
         );
 
-        let ina219 = ti_ina219::Ina219::init(i2c);
+        let ina219 = ti_ina219::Ina219::new(i2c, ti_ina219::DeviceAddress::new());
         State { ina219 }
     }
 
